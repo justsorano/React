@@ -1,0 +1,52 @@
+.card{
+   box-shadow: none;
+   &:hover{
+      box-shadow: 3px 3px 5px;
+   }
+   &__body{
+      display: flex;
+      flex-direction: column;
+   }
+   &__img{
+      flex: 1 1 50%;
+   }
+   &__imgsubtitle{
+      display: flex;
+      flex-direction: row;
+      font-size: 16px;
+      font-weight: 600;
+      div{
+         flex: 1 0 50%;
+      }
+   }
+   &__title{
+      font-size: 23px;
+      font-weight: 600;
+   }
+   &__subtitle{
+      font-size: 14px;
+   }
+   &__btn{
+      font-size: 14px;
+      display: flex;
+      flex-flow: row wrap;
+      &--red{
+         flex: 1 0 50%;
+         border: 1px solid $redbtn;
+         color: $redbtn;
+         border-radius: 2px;
+      }
+      &--orange{
+         flex: 1 0 50%;
+         border: 1px solid $orangebtn;
+         color: $orangebtn;
+         border-radius: 2px;
+      }
+      &--blue{
+         flex: 0 1 50px;
+         border: 1px solid $bluebtn;
+         color: $bluebtn;
+         border-radius: 2px;
+      }
+   }
+}
