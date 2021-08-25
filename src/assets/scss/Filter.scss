@@ -1,0 +1,14 @@
+.filter{
+   flex: 1 0 40%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   &__column{
+
+   }
+   &__btn{
+      border: 1px solid $forestgreen;
+      background: $forestgreen;
+      color: white;
+   }
+}

@@ -9,7 +9,10 @@ export const Search = () =>{
       e.preventDefault()
       const str = value
       console.log(str)
-   }
+      setValue({
+         search:''
+      })
+      }
    const inputHandler = (e) =>{
       setValue(prev =>({
          ...prev,

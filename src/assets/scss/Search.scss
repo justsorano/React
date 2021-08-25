@@ -1,0 +1,21 @@
+.search{
+   flex: 1 0 50%;
+   &__form{
+      display: flex;
+      width: 100%;
+   }
+   &__search{
+      padding: 5px;
+      border: 1px solid #eeeff0;
+      width: 100%;
+   }
+   &__pushbtn{
+      background: $forestgreen;
+      border: 1px solid $forestgreen;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      color: white;
+      font-size: 16px;
+      padding: 5px;
+   }
+}

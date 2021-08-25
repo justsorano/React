@@ -1,20 +1,21 @@
 import React from 'react'
-
+import img1 from '..//..//assets/imgs/index.jpg'
+import img2 from '..//../assets/imgs/images.jpg'
 export const Card = () =>{
    return (
       <div className='card'>
          <div className='card__body'>
          <div className='card__img'>
-            <img alt='img1'/>
-            <img alt='img2'/>
+            <img src={img1} alt='img1'/>
+            <img src={img2} alt='img2'/>
          </div>
          <div className='card__imgsubtitle'>
             <div>Card name</div>
             <div>Card name2</div>
          </div>
-         <div className='card__title'>
+         <a  href='#' className='card__title'>
          title text
-         </div>
+         </a>
          <small className='card__subtitle'>
             subtitle text
          </small>

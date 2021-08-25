@@ -1,14 +1,21 @@
 .card{
    box-shadow: none;
+   border: none;
    &:hover{
       box-shadow: 3px 3px 5px;
    }
    &__body{
       display: flex;
       flex-direction: column;
+      margin: 0 10px;
    }
    &__img{
       flex: 1 1 50%;
+      max-height: 180px;
+      img{
+         max-width: 100px;
+         max-height: 180px;
+      }
    }
    &__imgsubtitle{
       display: flex;
@@ -22,31 +29,56 @@
    &__title{
       font-size: 23px;
       font-weight: 600;
+      color: $fontcolor;
+      text-decoration: none;
+      &:hover{
+         color: $forestgreen;
+      }
    }
    &__subtitle{
       font-size: 14px;
+      margin: 0 0 10px 0;
    }
    &__btn{
       font-size: 14px;
       display: flex;
       flex-flow: row wrap;
+      margin: 0 0 15px 0;
       &--red{
          flex: 1 0 50%;
          border: 1px solid $redbtn;
          color: $redbtn;
          border-radius: 2px;
+         padding: 5px;
+         transition: background .5s,color .5s;
+         &:hover{
+            background: $redbtn;
+            color: white;
+         }
       }
       &--orange{
          flex: 1 0 50%;
          border: 1px solid $orangebtn;
          color: $orangebtn;
          border-radius: 2px;
+         padding: 5px;
+         transition: background .5s,color .5s;
+         &:hover{
+            background: $orangebtn;
+            color: white;
+         }
       }
       &--blue{
-         flex: 0 1 50px;
+         flex: 0 1 60px;
          border: 1px solid $bluebtn;
          color: $bluebtn;
          border-radius: 2px;
+         padding: 5px;
+         transition: background .5s,color .5s;
+         &:hover{
+            background: $bluebtn;
+            color: white;
+         }
       }
    }
 }
