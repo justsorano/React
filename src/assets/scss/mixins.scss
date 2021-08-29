@@ -4,3 +4,8 @@
    transition: background .5s,color .5s;
    background: white;
 }
+@mixin content{
+   margin: 30px 15px 15px 15px;
+   display: flex;
+   flex-flow: row wrap;
+}

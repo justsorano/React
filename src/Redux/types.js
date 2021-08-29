@@ -1,0 +1,2 @@
+export const COMPLETE = 'CARD/COMPLETE'
+export const ASYNCPOPULAR = 'ASYNC/POPULAR'
