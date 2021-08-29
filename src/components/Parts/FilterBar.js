@@ -8,7 +8,7 @@ export const FilterBar = () =>{
       flexDerection:'row',
       justifyContent:'center',
       alignItems:'center',
-      margin:'35px 0 0 0'
+      margin:'35px 15px 0 15px'
 
    }
    return (

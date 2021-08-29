@@ -20,9 +20,9 @@ export const Card = () =>{
             subtitle text
          </small>
          <div className='card__btn'>
-            <button className='card__btn--red'>click</button>
-            <button className='card__btn--orange'>click</button>
-            <button className='card__btn--blue'>click</button>
+            <button className='card__btn--red'>Начать</button>
+            <button className='card__btn--orange'>Статистика</button>
+            <button className='card__btn--blue'>Поделиться</button>
          </div>
          </div>
       </div>

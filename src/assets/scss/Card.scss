@@ -1,6 +1,7 @@
 .card{
    box-shadow: none;
    border: none;
+   max-width: 210px;
    &:hover{
       box-shadow: 3px 3px 5px;
    }
@@ -10,10 +11,12 @@
       margin: 0 10px;
    }
    &__img{
-      flex: 1 1 50%;
-      max-height: 180px;
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
       img{
-         max-width: 100px;
+         flex: 0 0 50%;
+         max-width: 95px;
          max-height: 180px;
       }
    }
@@ -48,9 +51,7 @@
          flex: 1 0 50%;
          border: 1px solid $redbtn;
          color: $redbtn;
-         border-radius: 2px;
-         padding: 5px;
-         transition: background .5s,color .5s;
+         @include btn;
          &:hover{
             background: $redbtn;
             color: white;
@@ -60,9 +61,7 @@
          flex: 1 0 50%;
          border: 1px solid $orangebtn;
          color: $orangebtn;
-         border-radius: 2px;
-         padding: 5px;
-         transition: background .5s,color .5s;
+         @include btn;
          &:hover{
             background: $orangebtn;
             color: white;
@@ -72,9 +71,7 @@
          flex: 0 1 60px;
          border: 1px solid $bluebtn;
          color: $bluebtn;
-         border-radius: 2px;
-         padding: 5px;
-         transition: background .5s,color .5s;
+         @include btn;
          &:hover{
             background: $bluebtn;
             color: white;

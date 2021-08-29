@@ -2,13 +2,24 @@
    flex: 1 0 40%;
    display: flex;
    flex-direction: row;
-   align-items: center;
+   margin: 0 0 0 15px;
    &__column{
-
+      display: flex;
+      flex-direction: row;
+      margin: 0 15px 0 0;
    }
    &__btn{
-      border: 1px solid $forestgreen;
-      background: $forestgreen;
-      color: white;
+      &:first-child{
+         background: $forestgreen;
+         border: 1px solid $forestgreen;
+         color: white;
+         border-top-left-radius: 3px;
+         border-bottom-left-radius: 3px;
+      }
+      min-height: 35px;
+      min-width: 55px;
+      background: white;
+      color: $fontcolor;
+      border: 1px solid #eeeff0;
    }
 }
