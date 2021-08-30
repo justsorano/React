@@ -9,6 +9,21 @@ const initialState = [
    {id:3,
    info:{title:'the best anime',subtitle:'subtitle anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
    complited:66},
+   {id:4,
+      info:{title:'the best anime',subtitle:'subtitle anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+      complited:66},
+      {id:5,
+         info:{title:'the best anime',subtitle:'subtitle anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+         complited:0},
+         {id:6,
+         info:{title:'the best anime',subtitle:'subtitle anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+         complited:48},
+         {id:7,
+         info:{title:'the best anime',subtitle:'subtitle anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+         complited:66},
+         {id:8,
+            info:{title:'the best anime',subtitle:'subtitle anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+            complited:66},
 ]
 export const cardsReducer = (state = initialState,action) =>{
    switch(action.type){

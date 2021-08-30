@@ -2,6 +2,7 @@
    box-shadow: none;
    border: none;
    max-width: 210px;
+   margin: 15px 0 0 0;
    &:hover{
       box-shadow: 3px 3px 5px;
    }
@@ -52,7 +53,7 @@
       flex-flow: row wrap;
       margin: 0 0 15px 0;
       &--red{
-         flex: 1 0 50%;
+         flex: 1 0 25%;
          border: 1px solid $redbtn;
          color: $redbtn;
          @include btn;
@@ -62,7 +63,7 @@
          }
       }
       &--orange{
-         flex: 1 0 50%;
+         flex: 1 0 25%;
          border: 1px solid $orangebtn;
          color: $orangebtn;
          @include btn;

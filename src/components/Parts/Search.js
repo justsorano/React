@@ -22,7 +22,7 @@ export const Search = () =>{
    return (
       <div className='search'>
          <form className='search__form' onSubmit={SumbitHandler}>
-            <input className='search__search' type='search' name='search' value={value.search} onChange={inputHandler}/>
+            <input className='search__search' type='search' name='search' placeholder='Напишите запрос для поиска' value={value.search} onChange={inputHandler}/>
             <button className='search__pushbtn'>Найти</button>
          </form>
       </div>

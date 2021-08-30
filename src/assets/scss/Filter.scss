@@ -16,6 +16,10 @@
          border-top-left-radius: 3px;
          border-bottom-left-radius: 3px;
       }
+      &:focus{
+         background: $forestgreen;
+         color: white;
+      }
       min-height: 35px;
       min-width: 55px;
       background: white;

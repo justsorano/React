@@ -11,6 +11,10 @@
       padding: 5px;
       border: 1px solid #eeeff0;
       width: 100%;
+      background: white;
+      &:focus{
+         border-color: $forestgreen;
+      }
    }
    &__pushbtn{
       background: $forestgreen;

@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 export const Card = ({card}) =>{
    return (
       <div className='card'>
@@ -11,16 +12,16 @@ export const Card = ({card}) =>{
             <div>{card.imgtitle1}</div>
             <div>{card.imgtitle2}</div>
          </div>
-         <a  href='#' className='card__title'>
+         <NavLink  to='/' className='card__title'>
          {card.info.title}
-         </a>
+         </NavLink>
          <small className='card__subtitle'>
             {card.info.subtitle}
          </small>
          <div className='card__btn'>
-            <button className='card__btn--red'>Начать</button>
-            <button className='card__btn--orange'>Статистика</button>
-            <button className='card__btn--blue'>Поделиться</button>
+            <button className='card__btn--red _icon-play'>Начать</button>
+            <button className='card__btn--orange _icon-menu'>Статистика</button>
+            <button className='card__btn--blue _icon-share'>Поделиться</button>
          </div>
          </div>
       </div>
