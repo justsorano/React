@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { Card } from '../Parts/Card'
 import {asyncPop} from '..//..//Redux/action'
