@@ -7,7 +7,7 @@ export const FilterBar = () =>{
       display:'flex',
       flexDerection:'row',
       alignItems:'center',
-      margin:'35px 15px 0 15px'
+      margin:'35px 0 0 15px'
    }
    return (
       <div className='filterBar' style={styles}>

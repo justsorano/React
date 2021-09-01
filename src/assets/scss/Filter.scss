@@ -1,8 +1,7 @@
 .filter{
-   flex: 1 0 60%;
+   flex: 1 0 40%;
    display: flex;
    flex-direction: row;
-   margin: 0 0 0 15px;
    &__column{
       display: flex;
       flex-direction: row;
@@ -10,16 +9,23 @@
    }
    &__btn{
       &:first-child{
-         background: $forestgreen;
-         border: 1px solid $forestgreen;
-         color: white;
          border-top-left-radius: 3px;
          border-bottom-left-radius: 3px;
       }
+      height: 100%;
       width: 100%;
+      padding: 5px 10px;
       text-align: center;
       background: white;
       color: $fontcolor;
       border: 1px solid #eeeff0;
    }
+}
+.hide{
+   display: none;
+}
+._active--btn{
+   background: $forestgreen;
+   border: 1px solid $forestgreen;
+   color: white;
 }

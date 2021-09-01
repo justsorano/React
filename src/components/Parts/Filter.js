@@ -1,27 +1,36 @@
-import React,{useRef} from 'react'
-   // hot-1 первая кнопка которая показывает еще два фильтра по новизне за какое то кол во дней и в каком формате будет  тест
-   // new-2 вторая кнопка будет показывать только одну доп колонку с выбором все\картинки\видео тесты
+import React,{useState} from 'react'
 export const Filter = () =>{
-   const column = useRef(null)
+   const [styles,setStyles] = useState(['filter__column'])
    const buttonHide = () =>{
-      console.log(column.current);
+      if(styles[1]){
+         return
+      }
+      setStyles(prev =>[
+         ...prev,
+         'hide'
+      ])
+   }
+   const buttonShow = () =>{
+      setStyles([
+         'filter__column'
+      ])
    }
    return (
       <div className='filter'>
          <div className='filter__column'>
-            <button className='filter__btn hot-1'>Популярные</button>
-            <button className='filter__btn new-2' onClick={buttonHide}>Новинки</button>
+            <button className='filter__btn _active--btn' onClick={buttonShow}>Популярные</button>
+            <button className='filter__btn' onClick={buttonHide}>Новинки</button>
          </div>
-         <div className='filter__column' ref={column}>
-         <button className='filter__btn'>Все</button>
-         <button className='filter__btn'>За месяц</button>
-         <button className='filter__btn'>За неделю</button>
-         <button className='filter__btn'>За день</button>
+         <div className={styles.join(' ')}>
+         <button className='filter__btn _active--btn'>Все</button>
+         <button className='filter__btn'>месяц</button>
+         <button className='filter__btn'>неделя</button>
+         <button className='filter__btn'>день</button>
          </div>
          <div className='filter__column'>
-         <button className='filter__btn'>Все</button>
-         <button className='filter__btn'>В картинках</button>
-         <button className='filter__btn'>В видео</button>
+         <button className='filter__btn _active--btn'>Все</button>
+         <button className='filter__btn'>картинки</button>
+         <button className='filter__btn'>медиа</button>
          </div>
       </div>
    )

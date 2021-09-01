@@ -6,7 +6,7 @@ return (
       <div className='Navbar'>
             <nav className='Navbar__column'>
                   <li className='Navbar__row'>
-                  <NavLink className='Navbar__link _active _icon-trophy' exact to='/'>Главная</NavLink>
+                  <NavLink className='Navbar__link _active _icon-trophy' exact to='/'>Sora</NavLink>
                   </li>
                   <li className='Navbar__row'>
                   <NavLink className='Navbar__link' exact to='/about'>О сайте</NavLink>
