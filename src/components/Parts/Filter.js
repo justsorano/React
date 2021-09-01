@@ -15,8 +15,18 @@ export const Filter = () =>{
          'filter__column'
       ])
    }
+   const buttonHandler = (e) =>{
+      if(e.target.className !== 'filter__btn'){
+         return 
+      }
+      const colletion = e.target.parentNode.children
+      for(let i = 0;i < colletion.length;i++){
+         colletion[i].className = 'filter__btn'
+      }
+      e.target.className = 'filter__btn _active--btn'
+   }
    return (
-      <div className='filter'>
+      <div className='filter' onClick={buttonHandler}>
          <div className='filter__column'>
             <button className='filter__btn _active--btn' onClick={buttonShow}>Популярные</button>
             <button className='filter__btn' onClick={buttonHide}>Новинки</button>
