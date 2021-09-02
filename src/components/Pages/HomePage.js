@@ -1,16 +1,23 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Card} from '../Parts/Card'
-const HomePage = ({card}) =>{
+import Modal from '../Parts/Modal'
+import {showModal} from '..//../Redux/action'
+const HomePage = ({card,app,showModal}) =>{
    return (
       <main className='HomePage'>
          <div className='HomePage__content'>
-            {card.map(i => <Card card={i} key={i.id} />)}
+         {app && <Modal/>}
+            {card.map(i => <Card card={i} key={i.id} showModal={showModal}/>)}
          </div>
       </main>
    )
 }
 const mapStateToProps = state =>({
-   card:state.card
+   card:state.card,
+   app:state.app.modal
 })
-export default connect(mapStateToProps,null)(HomePage)
+const mapDispatchToProps = ({
+   showModal
+})
+export default connect(mapStateToProps,mapDispatchToProps)(HomePage)

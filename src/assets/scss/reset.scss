@@ -47,3 +47,8 @@ table {
 li{
 	list-style: none;
 }
+.active{
+	text-decoration: unset;
+	pointer-events: none;
+	color: inherit;
+}
