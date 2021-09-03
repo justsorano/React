@@ -1,6 +1,10 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-export const Card = ({card,showModal}) =>{
+export const Card = ({card,showModal,getCardId}) =>{
+   function showCard(id){
+      showModal()
+      getCardId(card.id)
+   }
    return (
       <div className='card'>
          <div className='card__body'>
@@ -19,7 +23,7 @@ export const Card = ({card,showModal}) =>{
             {card.info.subtitle}
          </small>
          <div className='card__btn'>
-            <button className='card__btn--red _icon-play' onClick={showModal}>Начать</button>
+            <button className='card__btn--red _icon-play' onClick={showCard}>Начать</button>
             <button className='card__btn--orange _icon-menu'>Статистика</button>
             <button className='card__btn--blue _icon-share'>Поделиться</button>
          </div>

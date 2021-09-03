@@ -1,11 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Card } from '../Parts/Card'
-import {asyncPop} from '..//..//Redux/action'
-const PopularPage = ({card,asyncPop}) =>{
-   // useEffect(()=>{
-   //    asyncPop()
-   // },[])
+const PopularPage = ({card}) =>{
+
    return (
       <div className='PopularPage'>
       <div className='PopularPage__content'>
@@ -18,7 +15,5 @@ const PopularPage = ({card,asyncPop}) =>{
 const mapStateToProps = state =>({
    card:state.card
 })
-const mapDispatchToProps = {
-   asyncPop
-}
-export default connect(mapStateToProps,mapDispatchToProps)(PopularPage)
+
+export default connect(mapStateToProps,null)(PopularPage)

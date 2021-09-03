@@ -1,18 +1,18 @@
-import {ASYNCPOPULAR,HIDEMODAL,SHOWMODAL} from './types'
-export function asyncPop(){
+import {HIDEMODAL,SHOWMODAL,CARDMODAL} from './types'
+
+export function showModal() {
    return {
-      type:ASYNCPOPULAR
+      type:SHOWMODAL
    }
 }
-export function showModal(id) {
+export function getCardId(id){
    return {
-      type:SHOWMODAL,
+      type:CARDMODAL,
       payload:id
    }
 }
-export function hideModal(id) {
+export function hideModal() {
    return {
-      type:HIDEMODAL,
-      payload:id
+      type:HIDEMODAL
    }
 }
