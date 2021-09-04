@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import {hideModal} from '..//../Redux/action'
-const Modal = ({hideModal,card}) =>{
+import {hideModal,Refresh} from '..//../Redux/action'
+const Modal = ({hideModal,Refresh,card}) =>{
+   const info = card.filter(i => i.selected === true)
    const [value,setValue] = useState('512')
    const handleChange = (e) =>{
       setValue(e.target.value)
    }
    const handleSubmit = (e) =>{
       alert(`вы выбрали ${value}`)
+      e.preventDefault()
+   }
+   const handleReject = (e) =>{
+      hideModal()
+      Refresh()
       e.preventDefault()
    }
    return (
@@ -17,8 +23,8 @@ const Modal = ({hideModal,card}) =>{
             <div className='modal__img'>
                <span className='_icon-trophy'></span>
             </div>
-            <div className='modal__title'>{card[0].info.title}</div>
-            <small className='modal__subtitle'>{card[0].info.subtitle}</small>
+            <div className='modal__title'>{info[0].info.title}</div>
+            <small className='modal__subtitle'>{info[0].info.subtitle}</small>
             </div>
             <form className='modal__row' onSubmit={handleSubmit}>
             <legend className='modal__choose'>Выберите раунд.</legend>
@@ -35,7 +41,7 @@ const Modal = ({hideModal,card}) =>{
             <div className='modal__result'>В этом бою будет {value / 2} раунд(ов).</div>
             <div className='modal__btn--group'>
             <button className='modal__btn modal__btn--start' type='submit'>Старт</button>
-            <button className='modal__btn modal__btn--reject' type='reset' onClick={hideModal}>Отмена</button>
+            <button className='modal__btn modal__btn--reject' type='reset' onClick={handleReject}>Отмена</button>
             </div>
             </form>
          </div>
@@ -46,6 +52,6 @@ const mapStateToProps = state =>({
    card:state.card
 })
 const mapDispatchToProsp = ({
-   hideModal
+   hideModal,Refresh
 })
 export default connect(mapStateToProps,mapDispatchToProsp)(Modal)

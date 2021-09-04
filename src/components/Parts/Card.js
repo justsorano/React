@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 export const Card = ({card,showModal,getCardId}) =>{
-   function showCard(id){
+   function showCard(){
       showModal()
       getCardId(card.id)
    }
