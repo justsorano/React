@@ -13,8 +13,8 @@ export const Card = ({card,showModal,getCardId}) =>{
          <img src={`./imgs/${card.info.imgs[1]}.jpg`} alt='wrapper'/>
          </div>
          <div className='card__imgsubtitle'>
-            <div>{card.imgtitle1}</div>
-            <div>{card.imgtitle2}</div>
+            <div>{card.info.imgtitle1}</div>
+            <div>{card.info.imgtitle2}</div>
          </div>
          <NavLink  to='/' className='card__title'>
          {card.info.title}
@@ -24,7 +24,7 @@ export const Card = ({card,showModal,getCardId}) =>{
          </small>
          <div className='card__btn'>
             <button className='card__btn--red _icon-play' onClick={showCard}>Начать</button>
-            <button className='card__btn--orange _icon-menu'>Статистика</button>
+            <NavLink className='card__btn--orange _icon-menu' to='/stats' target='_blank' >Статистика</NavLink>
             <button className='card__btn--blue _icon-share'>Поделиться</button>
          </div>
          </div>

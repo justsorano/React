@@ -66,6 +66,7 @@
          flex: 1 0 25%;
          border: 1px solid $orangebtn;
          color: $orangebtn;
+         text-decoration: unset;
          @include btn;
          &:hover{
             background: $orangebtn;

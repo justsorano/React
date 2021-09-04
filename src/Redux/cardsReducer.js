@@ -1,15 +1,15 @@
 import {CARDMODAL,REFRESHSELECTED} from './types'
 const initialState = [
    {id:1,
-   info:{title:'the best anime1',subtitle:'anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+   info:{title:'Лучшее аниме',subtitle:'Эпическая схватка самых популярных аниме за 1990-2021 года',imgs:['index','images',],imgtitle1:'Lucky Star',imgtitle2:'The Melancholy of Haruhi Suzumiya'},
    complited:0,
    selected:false},
    {id:2,
-   info:{title:'the best anime2',subtitle:'anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+   info:{title:'Самое милое животное',subtitle:'Выберете самое милое животное,может вы даже не знали какое ваще',imgs:['cat','panda',],imgtitle1:'Кот',imgtitle2:'Панда'},
    complited:22,
    selected:false},
    {id:3,
-   info:{title:'the best anime3',subtitle:'anime battle',imgs:['index','images',],imgtitle1:'title1',imgtitle2:'title2'},
+   info:{title:'Лучший фильм',subtitle:'Выберете лучший фильм за последние несколько десятков лет',imgs:['avatar','widow',],imgtitle1:'Аватар',imgtitle2:'Вдова'},
    complited:50,
    selected:false},
 ]
