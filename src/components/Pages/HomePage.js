@@ -3,9 +3,11 @@ import {connect} from 'react-redux'
 import {Card} from '../Parts/Card'
 import Modal from '../Parts/Modal'
 import {showModal,getCardId} from '..//../Redux/action'
+import {FilterBar} from '../Parts/FilterBar'
 const HomePage = ({card,app,showModal,getCardId}) =>{
    return (
       <main className='HomePage'>
+            <FilterBar/>
          <div className='HomePage__content'>
          {app && <Modal/>}
             {card.map(i => <Card card={i} key={i.id} showModal={showModal} getCardId={getCardId}/>)}

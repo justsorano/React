@@ -1,4 +1,4 @@
-import {HIDEMODAL,SHOWMODAL,CARDMODAL,REFRESHSELECTED} from './types'
+import {HIDEMODAL,SHOWMODAL,CARDMODAL,REFRESHSELECTED, REGISTER} from './types'
 
 export function showModal() {
    return {
@@ -19,5 +19,11 @@ export function hideModal() {
 export function Refresh(){
    return {
       type:REFRESHSELECTED
+   }
+}
+export function Register(user){
+   return {
+      type:REGISTER,
+      payload:user
    }
 }

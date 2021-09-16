@@ -9,3 +9,12 @@
    display: flex;
    flex-flow: row wrap;
 }
+@mixin inputSearch{
+   padding: 5px;
+   border: 1px solid #eeeff0;
+   width: 100%;
+   background: white;
+   &:focus{
+      border-color: $forestgreen;
+   }
+}

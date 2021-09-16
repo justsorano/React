@@ -1,10 +1,10 @@
 .card{
    box-shadow: none;
    border: none;
-   max-width: 210px;
-   margin: 15px 0 0 0;
+   max-width: 230px;
+   margin: 15px 10px 0 0;
    &:hover{
-      box-shadow: 3px 3px 5px;
+      box-shadow: 1px 1px 5px;
    }
    &__body{
       display: flex;
@@ -17,7 +17,7 @@
       max-width: 100%;
       img{
          flex: 0 0 50%;
-         max-width: 95px;
+         max-width: 110px;
          max-height: 180px;
       }
    }
